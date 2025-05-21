@@ -1,0 +1,11 @@
+.blue {
+  background: linear-gradient(
+    to left,
+    #6a0dad,
+    #1e3a8a
+  ); /* Purple to Blue gradient */
+  position: sticky; /* Stick the navbar to the top of the page */
+
+  z-index: 1000; /* Ensure the navbar stays on top of other content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

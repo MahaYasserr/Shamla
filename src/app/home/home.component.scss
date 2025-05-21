@@ -1,0 +1,322 @@
+// .bg {
+//   // background: linear-gradient(
+//   //     to bottom,
+//   //     rgba(82, 27, 162, 0) 0%,
+//   //     /* Fully transparent at the top */ rgba(82, 27, 162, 0.5) 50%,
+//   //     /* Semi-transparent in the middle */ rgba(82, 27, 162, 1) 100%
+//   //   ),
+//   //   url(/assets/images/bg.webp);
+//   // background-size: cover;
+//   // background-position: center;
+//   // background-repeat: no-repeat;
+//   position: relative;
+//   z-index: 1;
+// }
+
+.video-section {
+  position: relative;
+  z-index: 1;
+}
+
+.floating-image {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.rotating-star {
+  animation: spin 4s linear infinite;
+  font-size: 1.5rem;
+  color: gold;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.roadmap-card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    rgba(82, 27, 162, 0.5),
+    rgba(33, 150, 243, 0.5)
+  );
+
+  color: white;
+  border: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.roadmap-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(82, 27, 162, 0.6);
+}
+
+// .purpleBG {
+//   background-color: #521ba2;
+// }
+
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.video-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.container,
+.bg,
+.purpleBG {
+  position: relative;
+  z-index: 1;
+}
+
+// body {
+//   background: url("/assets/images/5525305.jpg") no-repeat center center;
+//   background-size: cover;
+//   background-attachment: fixed;
+// }
+
+.gsap-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: no-repeat center center;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+
+  .rocket {
+    position: absolute;
+    width: 100px;
+    opacity: 0.9;
+    transform: scale(1.2);
+  }
+
+  .rocket1 {
+    top: 100%;
+    left: 10%;
+  }
+
+  .rocket2 {
+    top: 120%;
+    left: 70%;
+  }
+}
+
+.container-fluid,
+.bg,
+main,
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.clouds {
+  position: absolute;
+  top: 20vh;
+  width: 100%;
+  height: 200px;
+  pointer-events: none;
+  z-index: 0;
+
+  .cloud {
+    position: absolute;
+    width: 1000px;
+    opacity: 0.7;
+  }
+
+  .cloud-left {
+    left: 200px;
+    top: 0;
+  }
+
+  .cloud-right {
+    right: 200px;
+    top: 0;
+  }
+}
+
+.comet {
+  position: absolute;
+  width: 80px;
+  opacity: 0.7;
+  z-index: 0;
+  transform: rotate(-45deg);
+  pointer-events: none;
+}
+
+.comet1 {
+  top: -100px;
+  left: -100px;
+}
+
+.comet2 {
+  top: -150px;
+  left: 100vw;
+  transform: rotate(45deg);
+}
+
+.rotating-earth {
+  animation: rotate 20s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.gradient-wrapper {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #6a11cb, #120036);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  animation: rollBG 5s ease-in-out infinite;
+}
+
+.typing-gradient {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white;
+  animation: typing 4s steps(30, end) forwards,
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+@keyframes rollBG {
+  0% {
+    background-position: -200% 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.gradient-wrapper {
+  background-size: 300% auto;
+}
+
+.roadmap-section {
+  position: relative;
+
+  color: white;
+}
+
+.roadmap-box {
+  background: linear-gradient(135deg, #6a11cb, #120036);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateX(0);
+}
+
+.left-box {
+  transform: translateX(-100px);
+}
+
+.right-box {
+  transform: translateX(100px);
+}
+
+.scroll-chart-section {
+  // background: linear-gradient(to bottom, #0d1b2a, #1b263b);
+  padding: 100px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.chart-container {
+  // max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.milestone {
+  fill: #007785;
+  stroke: white;
+  stroke-width: 2;
+  opacity: 0;
+  transform-origin: center;
+}
+
+.label {
+  fill: white;
+  font-size: 12px;
+  font-weight: bold;
+  opacity: 0;
+  direction: rtl;
+  font-family: "Cairo", sans-serif;
+}
+
+.bg-dark-blue {
+  background-color: #120036;
+}
